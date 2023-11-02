@@ -152,6 +152,10 @@ final class Run extends Command
             $settings->setTheme((string) $input->getOption('theme'));
         }
 
+        if ($input->getOption('progress') !== null) {
+            $settings->setShowProgressBar((bool) $input->getOption('progress'));
+        }
+
         return $settings;
     }
 
